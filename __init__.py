@@ -54,8 +54,8 @@ class ProgrammingChallenge(BaseChallenge):
     )
     challenge_model = ProgrammingChallenges
 
-    @staticmethod
-    def create(request):
+    @classmethod
+    def create(cls, request):
         """
         This method is used to process the challenge creation request.
         :param request:
@@ -63,7 +63,7 @@ class ProgrammingChallenge(BaseChallenge):
         """
         data = request.form or request.get_json()
 
-        challenge = ProgrammingChallenges(**data)
+        challenge = cls.challenge_model(**data)
 
         db.session.add(challenge)
         db.session.commit()
@@ -203,6 +203,19 @@ class ProgrammingChallenge(BaseChallenge):
         db.session.add(wrong)
         db.session.commit()
         db.session.close()
+
+
+def get_chal_class(class_id):
+    """
+    Utility function used to get the corresponding class from a class ID.
+
+    :param class_id: String representing the class ID
+    :return: Challenge class
+    """
+    cls = CHALLENGE_CLASSES.get(class_id)
+    if cls is None:
+        raise KeyError
+    return cls
 
 
 def load(app):
