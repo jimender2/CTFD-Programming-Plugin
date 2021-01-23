@@ -1,0 +1,51 @@
+{% extends "admin/challenges/create.html" %}
+
+{% block header %}
+<div class="alert alert-secondary" role="alert">
+	This type of challenge allows you to specify a challenge that someone has to get by programming.
+</div>
+{% endblock %}
+
+
+{% block value %}
+<div class="form-group">
+	<label for="value">URL<br>
+		<small class="form-text text-muted">
+			This is the url you post the challenge to.
+		</small>
+	</label>
+	<input type="url class="form-control" name="baseURL" placeholder="Enter url" required>
+
+</div>
+
+<div class="form-group">
+	<label for="value">Language<br>
+		<small class="form-text text-muted">
+			The language that you want them to solve it in.
+		</small>
+	</label>
+	<input type="text" class="form-control" name="language" placeholder="Enter language" required>
+</div>
+
+<div class="form-group">
+	<label for="value">Stdin<br>
+		<small class="form-text text-muted">
+			The Stdin that you want to pass to their code.
+		</small>
+	</label>
+	<input type="text" class="form-control" name="stdin" placeholder="Enter stdin" required>
+</div>
+
+<div class="form-group">
+	<label for="value">Args<br>
+		<small class="form-text text-muted">
+			The args that you want to pass to their code.
+		</small>
+	</label>
+	<input type="text" class="form-control" name="args" placeholder="Enter args" required>
+</div>
+{% endblock %}
+
+{% block type %}
+<input type="hidden" value="programming" name="type" id="chaltype">
+{% endblock %}
