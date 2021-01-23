@@ -18,10 +18,10 @@ class ProgrammingChallenges(Challenges):
     id = db.Column(
         db.Integer, db.ForeignKey("challenges.id", ondelete="CASCADE"), primary_key=True
     )
-    baseURL = db.Column(db.String, default="https://emkc.org/api/v1/piston/execute")
-    language = db.Column(db.String, default="python3")
-    stdin = db.Column(db.String, default="")
-    args = db.Column(db.String, default="")
+    baseURL = db.Column(db.String(50), default="https://emkc.org/api/v1/piston/execute")
+    language = db.Column(db.String(50), default="python3")
+    stdin = db.Column(db.String(50), default="")
+    args = db.Column(db.String(50), default="")
 
     def __init__(self, *args, **kwargs):
         super(ProgrammingChallenges, self).__init__(**kwargs)
