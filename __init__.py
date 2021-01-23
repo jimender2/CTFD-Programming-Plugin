@@ -86,7 +86,7 @@ class ProgrammingChallenge(BaseChallenge):
             "baseURL": challenge.baseURL,
             "language": challenge.language,
             "stdin": challenge.stdin,
-            "args": challeng.args,
+            "args": challenge.args,
             "description": challenge.description,
             "category": challenge.category,
             "state": challenge.state,
