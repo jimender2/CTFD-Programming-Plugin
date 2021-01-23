@@ -14,7 +14,7 @@ import requests
 
 
 class ProgrammingChallenges(Challenges):
-    __mapper_args__ = {"polymorphic_identity": "programming"}
+    __mapper_args__ = {"polymorphic_identity": "Programming"}
     id = db.Column(
         db.Integer, db.ForeignKey("challenges.id", ondelete="CASCADE"), primary_key=True
     )
