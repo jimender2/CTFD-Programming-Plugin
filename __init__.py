@@ -54,6 +54,22 @@ class ProgrammingChallenge(BaseChallenge):
     )
     challenge_model = ProgrammingChallenges
 
+    @staticmethod
+    def create(request):
+        """
+        This method is used to process the challenge creation request.
+        :param request:
+        :return:
+        """
+        data = request.form or request.get_json()
+
+        challenge = ProgrammingChallenges(**data)
+
+        db.session.add(challenge)
+        db.session.commit()
+
+        return challenge
+
     @classmethod
     def read(cls, challenge):
         """
