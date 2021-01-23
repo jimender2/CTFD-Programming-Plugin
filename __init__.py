@@ -191,7 +191,7 @@ class ProgrammingChallenge(BaseChallenge):
 
 def load(app):
     upgrade()
-    CHALLENGE_CLASSES["dynamic"] = ProgrammingChallenge
+    CHALLENGE_CLASSES["programming"] = ProgrammingChallenge
     register_plugin_assets_directory(
         app, base_path="/plugins/CTFD-Programming-Plugin/assets/"
     )
