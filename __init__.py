@@ -219,7 +219,7 @@ def get_chal_class(class_id):
 
 
 def load(app):
-    upgrade()
+    app.db.create_all()
     CHALLENGE_CLASSES["Programming"] = ProgrammingChallenge
     register_plugin_assets_directory(
         app, base_path="/plugins/CTFD-Programming-Plugin/assets/"
