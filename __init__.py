@@ -131,7 +131,6 @@ class ProgrammingChallenge(BaseChallenge):
         data = request.form or request.get_json()
         # submission = data["submission"].strip()
         # instance_id = submission
-        team_id = get_current_team().id
 
         try:
             r = requests.post(
