@@ -1,19 +1,19 @@
-{% extends "challenge.html" %}
+<body>{% extends "challenge.html" %}
 
 {% block description %}
+	<link rel="stylesheet" type="text/css" href="{{ script_root }}/plugins/CTFD-Programming-Plugin/assets/codemirror.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ script_root }}/plugins/code_challenges/assets/mdn-like.css">
+
     {{ challenge.html }}
+	<textarea id="challenge-input" class="challenge-input" type="text" name="answer" rows="15"></textarea>
 {% endblock %}
 
 {% block input %}
-    <link rel="stylesheet" type="text/css" href="/plugins/CTFD-Programming-Plugin/assets/codemirror.min.css">
-    <link rel="stylesheet" type="text/css" href="/plugins/CTFD-Programming-Plugin/assets/mdn-like.css">
     <input id="challenge-id" class="challenge-id" type="hidden" value="{{ challenge.id }}">
-    <textarea id="challenge-input" class="challenge-input form-control" type="text" name="answer" rows="15" style="display: none;"></textarea>
-    <div class="CodeMirror cm-s-mdn-like CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 71.5938px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 39px; margin-bottom: -17px; border-right-width: 13px; min-height: 28px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style="visibility: hidden;"><div class="CodeMirror-cursor" style="left: 32.5938px; top: 0px; height: 19.5px;"> </div></div><div class="CodeMirror-code" role="presentation"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 6px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable"></span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 28px;"></div><div class="CodeMirror-gutters" style="height: 41px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 32px;"></div></div></div></div>
 {% endblock %}
 
 {% block submit %}
     <button id="challenge-submit" class="challenge-submit" type="submit">
         Submit
     </button>
-{% endblock %}
+{% endblock %}</body>
