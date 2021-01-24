@@ -1,9 +1,6 @@
 <body>{% extends "challenge.html" %}
 
 {% block description %}
-	<link rel="stylesheet" type="text/css" href="{{ script_root }}/plugins/CTFD-Programming-Plugin/assets/codemirror.min.css">
-	<link rel="stylesheet" type="text/css" href="{{ script_root }}/plugins/CTFD-Programming-Plugin/assets/mdn-like.css">
-
     {{ challenge.html }}
 	<textarea id="challenge-input" class="challenge-input" type="text" name="answer" rows="15"></textarea>
 {% endblock %}
